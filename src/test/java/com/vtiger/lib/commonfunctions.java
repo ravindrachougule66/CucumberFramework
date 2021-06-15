@@ -124,5 +124,11 @@ public class commonfunctions {
 			//Returns the captured file path
 			return destination;
 		}
+		
+		
+		public void TestDeepikaCode()
+		{
+			System.out.println("Deepika");
+		}
 
 }
