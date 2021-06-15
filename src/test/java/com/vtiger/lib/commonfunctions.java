@@ -103,7 +103,12 @@ public class commonfunctions {
 			
 			return val;
 		}
-		
+		// Functiona name : getScreenshot
+		// Description: it will take screenshot
+		//creator name: Ritika
+		// Created Date : 15-06-2021
+		// Modified By : Ravindra
+		//Modify date: 16-06-2021
 		public static String getScreenshot(WebDriver driver, String screenshotName)  {
 			//below line is just to append the date format with the screenshot name to avoid duplicate names		
 		    String destination=null;
