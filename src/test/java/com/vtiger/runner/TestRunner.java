@@ -11,8 +11,8 @@ import cucumber.api.junit.Cucumber;
 		 ,glue={"com.vtiger.stepDefinitions"}
 		 //,format = {"pretty", "html:target/Destination"} 
 		//,plugin = {"pretty", "html:target/Destination"} 
-		,plugin = { "pretty", "html:target/cucumber-reports" }
-		// ,plugin = { "pretty", "html:target/cucumber-html-report","json:target/cucumber.json" }
+		//,plugin = { "pretty", "html:target/cucumber-reports" }
+		,plugin = { "pretty", "html:target/cucumber-html-report","json:target/cucumber-reports/cucumber.json" }
 		 ,tags = {"@run"}////or
 		// tags = {"@Smoke,@sanity"},////or
 		 //tags = {"@Smoke","@sanity"},////and
