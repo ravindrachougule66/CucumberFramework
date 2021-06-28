@@ -1,4 +1,3 @@
-@sanity
 Feature: Valid Login feature
 
 Background: 
@@ -12,7 +11,7 @@ Then : user should be navigated on home page
 And : user can see logout link available at home page
 Then close browser
 
-@run
+
 Scenario Outline: valid Login
 Given : Application should be launched with <url>
 When : user enters valid "<UserName>" and password "<Password>"
@@ -21,6 +20,6 @@ Then close browser
 Examples:
 |UserName | Password |
 |admin1   |admin1    |
-#|admin2   |admin2    |
-#|admin3   |admin3    |
+|admin2   |admin2    |
+|admin3   |admin3    |
 
