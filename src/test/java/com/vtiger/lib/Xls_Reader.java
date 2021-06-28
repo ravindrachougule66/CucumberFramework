@@ -5,15 +5,11 @@ package com.vtiger.lib;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.hssf.usermodel.HSSFHyperlink;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
-
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.*;
-
-
 import java.io.*;
 import java.util.Calendar;
 
@@ -60,6 +56,7 @@ public class Xls_Reader {
 	
 	
 	// returns the data from a cell
+	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,String colName,int rowNum){
 		try{
 			if(rowNum <=0)
@@ -129,6 +126,7 @@ public class Xls_Reader {
 	
 	
 	// returns the data from a cell
+	@SuppressWarnings("deprecation")
 	public String getCellData(String sheetName,int colNum,int rowNum){
 		try{
 			if(rowNum <=0)
@@ -290,7 +288,8 @@ public class Xls_Reader {
 	    hlink_style.setFont(hlink_font);
 	    //hlink_style.setWrapText(true);
 
-	    XSSFHyperlink link = createHelper.createHyperlink(XSSFHyperlink.LINK_FILE);
+	    @SuppressWarnings("deprecation")
+		XSSFHyperlink link = createHelper.createHyperlink(XSSFHyperlink.LINK_FILE);
 	    link.setAddress(url);
 	    cell.setHyperlink(link);
 	    cell.setCellStyle(hlink_style);
@@ -345,6 +344,7 @@ public class Xls_Reader {
 		return true;
 	}
 	// returns true if column is created successfully
+	@SuppressWarnings("deprecation")
 	public boolean addColumn(String sheetName,String colName){
 		
 		
@@ -391,6 +391,7 @@ public class Xls_Reader {
 	
 	
 	// removes a column and all the contents
+	@SuppressWarnings("deprecation")
 	public boolean removeColumn(String sheetName, int colNum) {
 		try{
 		if(!isSheetExist(sheetName))
@@ -400,7 +401,6 @@ public class Xls_Reader {
 		sheet=workbook.getSheet(sheetName);
 		XSSFCellStyle style = workbook.createCellStyle();
 		style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-		XSSFCreationHelper createHelper = workbook.getCreationHelper();
 		style.setFillPattern(HSSFCellStyle.NO_FILL);
 		
 	    

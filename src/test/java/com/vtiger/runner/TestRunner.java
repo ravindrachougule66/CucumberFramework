@@ -2,8 +2,6 @@ package com.vtiger.runner;
 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
